@@ -79,11 +79,11 @@ type WeatherQueryT struct {
 		Temp         int16   `json:"temp"`        // Температура в (С)
 		TempFeelLike int16   `json:"feel_like"`   // Температура по ощущеметру
 		Icon         string  `json:"icon"`        // Название иконки https://yastatic.net/weather/i/icons/funky/dark/< icon >.svg
-		Condition   string  `json:"condition"`  // Код погодного описания
-		WindSpeed   float32 `json:"wind_speed"`  // Скорость ветра (в м/с)
-		WindGust    float32 `json:"wind_gust"`   // Скорость порывов ветра (в м/с)
-		WindDir     string  `json:"wind_dir"`    // Направление ветра
-		PressureMM  uint16  `json:"pressure_mm"` // Давление (в мм рт.ст.).
+		Condition    string  `json:"condition"`   // Код погодного описания
+		WindSpeed    float32 `json:"wind_speed"`  // Скорость ветра (в м/с)
+		WindGust     float32 `json:"wind_gust"`   // Скорость порывов ветра (в м/с)
+		WindDir      string  `json:"wind_dir"`    // Направление ветра
+		PressureMM   uint16  `json:"pressure_mm"` // Давление (в мм рт.ст.).
 		PressurePas  uint16  `json:"pressure_pa"` // Давление (в гексопаскалях).
 		Humidity     uint16  `json:"humidity_mm"` // Влажность воздуха
 		Daytime      string  `json:"daytime"`     // Время суток
@@ -99,24 +99,24 @@ type WeatherQueryT struct {
 		MoonCode uint8  `json:"moon_code"` // Код фазы луны
 		MoonText string `json:"moon_text"` // Текстовый код фазы луны
 		Parts    []struct {
-			PartName    string  `json:"part_name"`   // Название времени суток
-			TempMin     int16   `json:"temp_min"`    // Минимальная температура для времени суток
-			TempMax     int16   `json:"temp_max"`    // Максимальная температура для времени суток
-			TempAvg     int16   `json:"temp_avg"`    // Средняя температура для времени суток
-			WindSpeed   float32 `json:"wind_speed"`  // Скорость ветра (в м/с)
-			WindGust    float32 `json:"wind_gust"`   // Скорость порывов ветра (в м/с)
-			WindDir     string  `json:"wind_dir"`    // Направление ветра
+			PartName   string  `json:"part_name"`   // Название времени суток
+			TempMin    int16   `json:"temp_min"`    // Минимальная температура для времени суток
+			TempMax    int16   `json:"temp_max"`    // Максимальная температура для времени суток
+			TempAvg    int16   `json:"temp_avg"`    // Средняя температура для времени суток
+			WindSpeed  float32 `json:"wind_speed"`  // Скорость ветра (в м/с)
+			WindGust   float32 `json:"wind_gust"`   // Скорость порывов ветра (в м/с)
+			WindDir    string  `json:"wind_dir"`    // Направление ветра
 			PressureMM uint16  `json:"pressure_mm"` // Давление (в мм рт.ст.).
 			PressurePa uint16  `json:"pressure_pa"` // Давление (в гексопаскалях).
-			Humidity    uint16  `json:"humidity_mm"` // Влажность воздуха
+			Humidity   uint16  `json:"humidity_mm"` // Влажность воздуха
 			PrecMM     float32 `json:"prec_mm"`     // Прогнозируемое количество осадков
 			PrecProb   uint16  `json:"prec_prob"`   // Вероятность выпадения осадков
 			PrecPeriod uint16  `json:"prec_period"` // Прогнозируемый период осадков
-			Icon        string  `json:"icon"`        // Название иконки https://yastatic.net/weather/i/icons/funky/dark/< icon >.svg
-			Condition   string  `json:"conditions"`  // Код погодного описания
-			FeelsLike   int16   `json:"feels_like"`  // Температура по ощущеметру для всемени суток
-			Daytime     string  `json:"daytime"`     // Время суток
-			Polar       bool    `json:"polar"`       // Признак того, что время суток, указанное в поле daytime является полярным.
+			Icon       string  `json:"icon"`        // Название иконки https://yastatic.net/weather/i/icons/funky/dark/< icon >.svg
+			Condition  string  `json:"conditions"`  // Код погодного описания
+			FeelsLike  int16   `json:"feels_like"`  // Температура по ощущеметру для всемени суток
+			Daytime    string  `json:"daytime"`     // Время суток
+			Polar      bool    `json:"polar"`       // Признак того, что время суток, указанное в поле daytime является полярным.
 		} `json:"parts"` // Прогнозы по временам суток
 	} `json:"forecast"` //	Объект содержит данные прогноза погоды
 
